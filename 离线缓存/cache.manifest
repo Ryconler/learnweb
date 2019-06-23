@@ -1,0 +1,7 @@
+CACHE MANIFEST
+# v1 - 2011-08-13
+# This is a comment.
+defer.js
+async.js
+NETWORK:
+# https://cdn.bootcss.com/lodash.js/4.17.11/lodash.js

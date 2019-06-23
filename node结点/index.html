@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent">
+    <div id="child1"></div>
+    <div id="child2"></div>
+    xxx
+</div>
+<script>
+    //结点操作
+    var parent=document.getElementById("parent");
+    var children = parent.childNodes //获得父结点的全部子节点,空格回车也算
+    children.forEach(item=>{
+        console.log('结点类型',item.nodeType);
+        if(item.nodeType === 1){  // 结点是元素
+            console.log('元素结点名',item.nodeName);
+        }
+        if(item.nodeType === 3){  // 结点是文本
+            console.log('文本结点值',item.nodeValue);
+        }
+    })
+    console.log('第一个结点',parent.firstChild);  // 第一个结点
+    console.log('第一个结点的下一个结点',parent.firstChild.nextSibling);  // 第一个结点的下一个结点
+    console.log('第一个元素结点',parent.firstElementChild);  // 第一个元素结点
+    console.log('第一个元素结点的下一个元素结点',parent.firstElementChild.nextElementSibling);  // 第一个元素结点的下一个元素结点
+    // 结点类型nodeType
+    /*
+    console.log(Node.ELEMENT_NODE)   // 1元素
+    console.log(Node.ATTRIBUTE_NODE)  // 2
+    console.log(Node.TEXT_NODE)  // 3文本
+    console.log(Node.CDATA_SECTION_NODE)  // 4
+    console.log(Node.ENTITY_REFERENCE_NODE)  // 5
+    console.log(Node.ENTITY_NODE)  // 6
+    console.log(Node.PROCESSING_INSTRUCTION_NODE)  // 7
+    console.log(Node.COMMENT_NODE)  // 8
+    console.log(Node.DOCUMENT_NODE)  // 9
+    console.log(Node.DOCUMENT_TYPE_NODE)  // 10
+    console.log(Node.DOCUMENT_FRAGMENT_NODE)  // 11
+    console.log(Node.NOTATION_NODE)  // 12
+    */
+
+    var child1=document.getElementById("child1")
+    console.log('child1的父结点',child1.parentNode)  //获得子结点的唯一父结点
+
+    var input=document.createElement("input")  //创建一个结点
+    input.type="text"
+    input.value="动态添加的input"
+    var p=document.createElement("p")
+    p.innerHTML=document.body.offsetHeight+","+document.documentElement.offsetWidth  //获得页面所有元素即body的宽度和高度，不包括滚动条,包括用scrollHeight..
+    parent.appendChild(input)  //给一个父结点添加子结点,默认到最后
+    parent.insertBefore(p,child1)  //添加到某一子元素的前面
+
+    // parent.removeChild(input)// 删除某一子结点
+
+
+</script>
+</body>
+</html>

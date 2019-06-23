@@ -1,0 +1,7 @@
+div{
+    -webkit-transform: none;  /* Webkit内核，chrome、Safari */
+    -moz-transform: none;  /* Mozilla火狐使用的内核 */
+    -ms-transform: none;  /* MS微软的IE使用的内核 */
+    -o-transform: none;  /* Opera浏览器使用内核 */
+    transform: none;
+}

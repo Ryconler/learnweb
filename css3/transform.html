@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            background: coral;
+            width: 100px;
+            height: 100px;
+            /*移动*/
+            /*transform: translate(100px,50px);*/
+            /*旋转*/
+            /*transform: rotate(10deg);*/
+            /*宽高缩放*/
+            /*transform: scale(2,2);*/
+            /*向x轴y轴倾斜*/
+            /*transform: skew(10deg,20deg);*/
+            /*3d旋转*/
+            /*transform:rotateX(80deg);*/
+
+            /*变化时的过渡*/
+            transition:width 2s,height 2s,transform 2s;
+            /*延迟执行*/
+            transition-delay: 0.5s;
+        }
+        .div1:hover{
+            width: 200px;
+            height: 200px;
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<div class="div1">
+11
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main main-wrap" id="1"></div>
+<div class="main" id="2"></div>
+<script>
+    let main = document.getElementsByClassName('main main-wrap') // 获得所有类中包含main和main-wrap的元素
+    let m = main[0]
+    console.log(m);
+    let cl = m.classList
+    console.log(cl);  // 元素所有的类
+    cl.add('add')
+    cl.remove('remove')
+    cl.contains('has')  // 是否包含某个类
+    cl.toggle('toggle')  // 有就添加，没有就删除
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 属性选择器 */
+        [style]{  /* 所有带有style属性的元素 */
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+        a[href]{  /* 所有带href属性的a元素 */
+            color: red;
+        }
+        a[target=_blank]{  /* 所有target="_blank"的a元素 */
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<div style=""></div>
+<a href="#">123</a>
+<a href="#" target="_blank">123</a>
+</body>
+<script>
+    let a = document.querySelector('a[href]')  // 同css选择器一样选择元素
+    let as = document.querySelectorAll('a')  // 选择所有的
+    console.log(a);
+    console.log(as);
+    console.log(a.webkitMatchesSelector('a[href]'));  // 指定元素是否匹配css选择符
+</script>
+</html>
