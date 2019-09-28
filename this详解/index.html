@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = '全局'
+    function fun1() {
+        var a = 'xx'
+        fun2()  // 函数在fun1中被调用
+    }
+    function fun2(){
+        console.log(this.a);  // this上下文为fun1
+    }
+    fun1()  // 函数在全局调用
+
+</script>
+</body>
+</html>
